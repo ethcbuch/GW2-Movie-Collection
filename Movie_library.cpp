@@ -22,7 +22,7 @@ void movie_Library::readFile(string file)
       inputFile >> inny.movieRuntime;
       inputFile.get();
       getline(inputFile, inny.movieFormat);
-      inputFile >> inny.movePrice;
+      inputFile >> inny.moviePrice;
       inputFile >> inny.releaseYear;
       inputFile.get();
       movies.insertSorted();
