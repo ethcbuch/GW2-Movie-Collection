@@ -4,9 +4,8 @@
 #include <iomanip>
 #include <string>
 #include "Movie.h"
-#include "Movie_library.h"
 
-using namespace std;
+
 
 
 void movie_Library::readFile(string file)
@@ -25,9 +24,14 @@ void movie_Library::readFile(string file)
       inputFile >> inny.movePrice;
       inputFile >> inny.releaseYear;
       inputFile.get();
-      movies.sort();
+      movies.insertSorted();
       getline(inputFile, inny.movieTitle);
     }
+};
+
+void movie_Libray::insertSorted()
+{
+  movies.sort();
 }
 
 void movie_Library::print()
@@ -35,4 +39,4 @@ void movie_Library::print()
   for(it = movies.begin(); it != movies.end(); it++)
     {
       cout << it->movieTitle << " " << it->directorName << " " << it->movieRuntime << " " << it->movieFormat << " " << it->moviePrice << " " << it->releaseYear << endl;
-    }
+}
