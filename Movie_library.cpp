@@ -6,7 +6,7 @@
 #include "Movie.h"
 #include "Movie_library.h"
 
-using namepspace std;
+using namespace std;
 
 
 void movie_Library::readFile(string file)
