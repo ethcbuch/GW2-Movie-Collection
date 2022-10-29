@@ -10,12 +10,12 @@ class movie_Library {
   std::list<movie>::iterator it;
 
  public:
-  void read_from_file(std::string file);
-  void write_to_file(std::string file);
-  void insert_sorted();
-  void find_movie(std::string movie);
-  void director_search(std::string director);
-  void remove_movie(std::string movie);
+  void readFile(std::string file);
+  void writeFile(std::string file);
+  void insertSorted();
+  void findMovie(std::string movie);
+  void directorSearch(std::string director);
+  void removeMovie(std::string movie);
   void print();
 
 };

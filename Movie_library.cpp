@@ -4,8 +4,9 @@
 #include <iomanip>
 #include <string>
 #include "Movie.h"
+#include "Movie_libray.h"
 
-
+using namepspace std;
 
 
 void movie_Library::readFile(string file)
@@ -29,7 +30,7 @@ void movie_Library::readFile(string file)
     }
 };
 
-void movie_Libray::insertSorted()
+void movie_Library::insertSorted()
 {
   movies.sort();
 }
