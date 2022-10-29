@@ -8,13 +8,15 @@ class movie_Library {
  private:
   std::list<movie> movies;
   std::list<movie>::iterator it;
-
+  std::string toLower(std::string str);
+  
  public:
   void readFile(std::string file);
   void writeFile(std::string file);
-  void findMovie(std::string movie);
   void insertSorted(movie sortee);
+  void findMovie(std::string sub);
   void directorSearch(std::string director);
+  void addMovie(movie input);
   void removeMovie(std::string movie);
   void print();
 
