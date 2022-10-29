@@ -12,8 +12,8 @@ class movie_Library {
  public:
   void readFile(std::string file);
   void writeFile(std::string file);
-  void insertSorted();
   void findMovie(std::string movie);
+  void insertSorted(movie sortee);
   void directorSearch(std::string director);
   void removeMovie(std::string movie);
   void print();
