@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <string>
 #include "Movie.h"
-#include "Movie_libray.h"
+#include "Movie_library.h"
 
 using namepspace std;
 
