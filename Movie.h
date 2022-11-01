@@ -9,5 +9,4 @@ struct movie {
   float moviePrice = 0;
   int releaseYear = 0;
 };
-
 #endif //MOVIE_H
