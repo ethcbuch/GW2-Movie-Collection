@@ -5,11 +5,13 @@
 #include <string>
 #include "Movie.h"
 #include "Movie_library.h"
+
 #define RESET "\033[0m"
 #define BOLDWHITE "\033[1m\033[37m"
 #define WHITE "\033[37m"
 #define BOLDYELLOW "\033[1m\033[33m"
 #define BOLDCYAN "\033[1m\033[36m"
+
 using namespace std;
 
 string movie_Library::toLower(string str)
@@ -145,13 +147,15 @@ void movie_Library::removeMovie(std::string movie)
 void movie_Library::print()
 {
   int n = 0;
-  cout << BOLDYELLOW << "All movies in the collection are: " << RESET << endl;
-  cout << BOLDCYAN << left << setw(30) << "Movie Name" << setw(25) << "Director" << setw(9) << "Format" << setw(9) << "Runtime" << setw(6) << "Year" << setw(6) << "Price" << RESET << endl; 
+  cout << "All movies in the collection are: " << endl;
+  cout << BOLDCYAN << left << setw(30) << "Movie Name" << setw(25) << "Director" << setw(9) << "Format" << setw(9) << "Runtime" << setw(6) << "Year" << setw(6) << "Price" << RESET << endl;
+  cout << "+-----------------------------------------------------------------------------------+" << endl;
   for(it = movies.begin(); it != movies.end(); it++)
     {
       cout << left << BOLDWHITE;
       cout << setw(30) << it->movieTitle << setw(25) << it->directorName << setw(9) << it->movieFormat << setw(9) << it->movieRuntime << setw(6) << it->releaseYear << "$" << setw(6) << it->moviePrice << RESET << endl;
       n++;
     }
+  cout << "+-----------------------------------------------------------------------------------+" << endl;
   cout << "For a whopping total of " << n << " movies in the collection!" << endl;
 }
