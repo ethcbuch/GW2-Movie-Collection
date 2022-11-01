@@ -3,8 +3,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   movie_Library libby;
   movie m1;
   movie m2;
