@@ -108,6 +108,7 @@ void movie_Library::removeMovie(std::string movie) {
 void movie_Library::print() {
   int n = 0;
   cout << "All movies in the collection are: " << endl;
+  cout << fixed << setprecision(2);
   cout << BOLDCYAN << left << setw(30) << "Movie Name" << setw(25) << "Director" << setw(9) << "Format" << setw(9) << "Runtime" << setw(6) << "Year" << setw(6) << "Price" << RESET << endl;
   cout << "+-----------------------------------------------------------------------------------+" << endl;
   for(it = movies.begin(); it != movies.end(); it++) {
