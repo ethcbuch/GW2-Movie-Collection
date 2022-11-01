@@ -3,11 +3,9 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   movie_Library libby;
   movie m1;
-  movie m2;
   string fileName;
   string outputName;
   string keyword;
@@ -30,57 +28,52 @@ int main()
   cin >> input;
 
   switch(input) {
-  case '1':
-    {
-      cout << "Enter a valid file name: ";
-      cin >> fileName;
-      libby.readFile(fileName);
-      cout << "Successfully read from file" << endl << endl;
+  case '1': {
+    cout << "Enter a valid file name: ";
+    cin >> fileName;
+    libby.readFile(fileName);
+    cout << "Successxfully read from file" << endl << endl;
       
-      break;
+    break;
     }
-  case '2':
-    {
+  case '2': {
     cout << "Enter a file name to output to: ";
     cin >> outputName;
     libby.writeFile(outputName);
     cout << "Successfully wrote to file" << endl << endl;
-						    
+    
     break;
-    }
-  case '3':
-    {
+  }
+  case '3': {
     cout << endl;
     libby.print();
     cout << endl;
-
+    
     break;
-    }
-  case '4':
-    {
+  }
+  case '4': {
     cout << "Please enter a keyword to look up movies by: ";
     cin.get();
     getline(cin, keyword);
-
+    
     libby.findMovie(keyword);
-
+    
     cout << endl;
-      
+    
     break;
-    }
-  case '5':
-    {
+  }
+  case '5': {
     cout << "Please enter a director to search to search by: ";
     getline(cin, directorInput);
     libby.directorSearch(directorInput);
     cout << endl;
-
+    
     break;
-    }
-  case '6':
-    {
+  }
+  case '6': {
     cout << "Please provide information for new movie: " << endl;
     cout << "Movie Title: ";
+    cin.get();
     getline(cin, m1.movieTitle);
     cout << "Director Name: ";
     getline(cin, m1.directorName);
@@ -93,34 +86,31 @@ int main()
     cout << "Price: ";
     cin >> m1.moviePrice;
     cout << endl;
-
+    
     libby.insertSorted(m1);
     
     cout << "Successfully added movie!" << endl << endl;
     break;
   }
-  case '7':
-    {
+  case '7': {
     cout << "Please provide information for which movie to delete: " << endl;
     cin.get();
     getline(cin, m1.movieTitle);
-
+    
     libby.removeMovie(m1.movieTitle);
     cout << "Successfully removed movie!";
     cout << endl;
     
     break;
     }
-  case '8':
-    {
+  case '8': {
     cout << "Thank you for using the Movie Collection program. Have a nice day! " << endl;;
     break;
-    }
-  default:
-    {
+  }
+  default: {
     cout << "Please enter a valid input!" << endl << endl;
     cin >> input;
-    }
+  }
   }
   }
   while (input != '8');
