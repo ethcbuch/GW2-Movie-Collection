@@ -14,12 +14,12 @@ ________________________________________________________________________________
 Running the Program:
 To run the program simply run the makefile to create an executable then run the executable ./movielibrary, however the prerequisites to running the program
 is to make sure the file with the movies and thier information exists as well as is in the format:
-Movie name /n
-Director name /n
-Movie Runtime /n
-Format /n
-Price /n
-Release Year /n
+Movie name \n
+Director name \n
+Movie Runtime \n
+Format \n
+Price \n
+Release Year \n
 .....
 
 ____________________________________________________________________________________________________________________________________________________________
