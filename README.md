@@ -1,5 +1,5 @@
 # GW2-Movie-Collection
-ERROR 177013 - Hunter Johnson and Ethan something something
+ERROR 404 - Hunter Johnson and Ethan Buchanan
 
 ____________________________________________________________________________________________________________________________________________________________
 
@@ -14,18 +14,18 @@ ________________________________________________________________________________
 Running the Program:
 To run the program simply run the makefile to create an executable then run the executable ./movielibrary, however the prerequisites to running the program
 is to make sure the file with the movies and thier information exists as well as is in the format:
-Movie name \n
-Director name \n
-Movie Runtime \n
-Format \n
-Price \n
-Release Year \n
-.....
+- Movie name \n
+- Director name \n
+- Movie Runtime
+- Format \n
+- Price \n
+- Release Year \n
+- ...and so on
 
 ____________________________________________________________________________________________________________________________________________________________
 
 Challenges:
-The challenges on this one was trying to make sure we didn't miss any functionality given the little information provided, as well as trying to figure out
+The challenges on this one was trying to make sure we included all of the required parts of the assignment, as well as trying to figure out
 how the list library worked.
 This time the majority of the challenges came from how we wanted it to look and figuring out how to make our menu colorful; Like seriously the majority of
 the challenges came from how much we wanted stuff spaced out, a whole arguement over the gaps between the lines of information.
