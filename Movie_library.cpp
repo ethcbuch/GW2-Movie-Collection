@@ -12,12 +12,13 @@
 using namespace std;
 
 
-
 void movie_Library::readFile(string file) {
   ifstream inputFile;
   movie input;
-  inputFile.open(file);  
+  inputFile.open(file);
+  
   getline(inputFile, input.movieTitle);
+  
   while(inputFile) {
       getline(inputFile, input.directorName);
       inputFile >> input.movieRuntime;
@@ -29,12 +30,14 @@ void movie_Library::readFile(string file) {
       insertSorted(input);
       getline(inputFile, input.movieTitle);
     }
+  //Weird stuff happens if we dont pop the front of the list
   movies.pop_front();
 }
 
 void movie_Library::writeFile(std::string file) {
   ofstream outputFile;
-  outputFile.open(file);  
+  outputFile.open(file);
+  
   for(it = movies.begin(); it != movies.end(); it++) {
     outputFile << it->movieTitle << endl
 	       << it->directorName << endl
@@ -64,6 +67,7 @@ void movie_Library::insertSorted(movie sortee) {
 void movie_Library::findMovie(string sub) {
   string subL = toLower(sub);
   int n = 0;
+  
   cout << "All movies containing the keyword " << subL << " are: " << endl;
   for(it = movies.begin(); it != movies.end(); it++) {
     if(toLower(it->movieTitle).find(subL) != string::npos) {
@@ -79,7 +83,9 @@ void movie_Library::findMovie(string sub) {
 
 void movie_Library::directorSearch(std::string director) {
   int n = 0;
+  
   cout << "Director " << director << " has made the following movies: " << endl;
+  
   for(it = movies.begin(); it != movies.end(); it++) {
     if(it->directorName == director) {
       cout << "Movie: " << it->movieTitle << " is a " << it->movieFormat << " that runs for " << it->movieRuntime
@@ -107,8 +113,10 @@ void movie_Library::removeMovie(std::string movie) {
 
 void movie_Library::print() {
   int n = 0;
+  
   cout << "All movies in the collection are: " << endl;
   cout << fixed << setprecision(2);
+  //If things blow up it probably because of these colors
   cout << BOLDCYAN << left << setw(30) << "Movie Name" << setw(25) << "Director" << setw(9) << "Format" << setw(9) << "Runtime" << setw(6) << "Year" << setw(6) << "Price" << RESET << endl;
   cout << "+-----------------------------------------------------------------------------------+" << endl;
   for(it = movies.begin(); it != movies.end(); it++) {
@@ -128,5 +136,6 @@ string movie_Library::toLower(string str) {
       str[i] = c + 32;
     }
   }
+  
   return str;
 }
